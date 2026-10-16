@@ -1,7 +1,10 @@
 import numpy as np
+import time
 import tensorflow as tf
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Dense
+
+start_time = time.time()
 
 # Training data
 # [hours studied, attendance]
@@ -61,3 +64,5 @@ if prediction[0][0] >= 0.5:
     print("Prediction: PASS")
 else:
     print("Prediction: FAIL")
+
+print('Time taken:', time.time() - start_time)
